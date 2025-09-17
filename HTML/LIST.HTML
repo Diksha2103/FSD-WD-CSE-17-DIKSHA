@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>College Departments</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#7c3aed; /* purple */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body{
+      margin:0;
+      min-height:100vh;
+      background: linear-gradient(180deg,#071029 0%, #0b1220 100%);
+      color:#e6eef8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:820px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), var(--glass));
+      border-radius:14px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      padding:22px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:12px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent), #f59e0b);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:white;
+      box-shadow:0 6px 18px rgba(124,58,237,0.15);
+      font-size:20px;
+    }
+    h1{ margin:0; font-size:20px; }
+    p.lead{ margin:2px 0 14px 0; color:var(--muted); font-size:13px; }
+
+    .dept-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:12px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      border-radius:10px;
+      padding:12px 14px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      border:1px solid rgba(255,255,255,0.03);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(2,6,23,0.5);
+    }
+    .icon{
+      width:46px;
+      height:46px;
+      border-radius:8px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:18px;
+      color:var(--accent);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .info{
+      display:flex;
+      flex-direction:column;
+    }
+    .info .name{ font-weight:600; font-size:15px; }
+    .info .desc{ color:var(--muted); font-size:13px; margin-top:4px; }
+
+    footer{ margin-top:16px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+    .tag{ background:rgba(124,58,237,0.12); color:var(--accent); padding:8px 10px; border-radius:999px; font-weight:600; font-size:13px; border:1px solid rgba(124,58,237,0.06); }
+
+    /* small screens */
+    @media (max-width:420px){
+      .logo{ width:46px;height:46px;font-size:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="logo">CC</div>
+      <div>
+        <h1>College Departments</h1>
+        <p class="lead">A concise list of academic & support departments — edit as needed for your college.</p>
+      </div>
+    </header>
+
+    <div class="dept-grid">
+      <div class="card">
+        <div class="icon">🖥️</div>
+        <div class="info">
+          <div class="name">Computer Science & Engineering (CSE)</div>
+          <div class="desc">Programming, AI/ML, Systems, Web & App dev.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📡</div>
+        <div class="info">
+          <div class="name">Electronics & Communication (ECE)</div>
+          <div class="desc">Embedded systems, communications, VLSI.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <div class="info">
+          <div class="name">Electrical Engineering (EE)</div>
+          <div class="desc">Power systems, controls & instrumentation.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏗️</div>
+        <div class="info">
+          <div class="name">Civil Engineering (CE)</div>
+          <div class="desc">Structures, surveying, construction management.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <div class="info">
+          <div class="name">Mechanical Engineering (ME)</div>
+          <div class="desc">Thermodynamics, manufacturing, CAD/CAM.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">💾</div>
+        <div class="info">
+          <div class="name">Information Technology (IT)</div>
+          <div class="desc">Networking, databases, cybersecurity.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚗️</div>
+        <div class="info">
+          <div class="name">Chemical Engineering</div>
+          <div class="desc">Process engineering, material science.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧪</div>
+        <div class="info">
+          <div class="name">Biotechnology / Biomedical</div>
+          <div class="desc">Biotech, biomedical devices, life sciences.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔬</div>
+        <div class="info">
+          <div class="name">Applied Sciences (Physics, Chemistry, Maths)</div>
+          <div class="desc">Foundational departments supporting engineering courses.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <div class="info">
+          <div class="name">Business / Management (BBA / MBA)</div>
+          <div class="desc">Management, entrepreneurship, project management.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <div class="info">
+          <div class="name">Humanities & Social Sciences</div>
+          <div class="desc">Communication, ethics, employability & soft skills.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <div class="info">
+          <div class="name">Design / Graphics</div>
+          <div class="desc">UI/UX, visual design, multimedia & animation.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏃</div>
+        <div class="info">
+          <div class="name">Physical Education / Sports</div>
+          <div class="desc">Sports teams, event management, wellness activities.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔧</div>
+        <div class="info">
+          <div class="name">Workshops & Training Cell</div>
+          <div class="desc">Skill development, internships, placement training.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤝</div>
+        <div class="info">
+          <div class="name">Student Affairs / Clubs</div>
+          <div class="desc">CodeChef Club, cultural & technical societies, events.</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="tag">Editable • Copy & paste • Mobile-friendly</div>
+      <div>Need this exported? Ask me to convert to PDF or add/remove departments.</div>
+    </footer>
+  </div>
+</body>
+</html>
