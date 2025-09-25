@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>Document</title>
+  <title>Online Book Store</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top frame (20%) */
+    .top {
+      height: 20%;
+      border: none;
+    }
+
+    /* Bottom section (80%) split into left + right */
+    .bottom {
+      height: 80%;
+      display: flex;
+    }
+
+    .left {
+      width: 20%;
+      border: none;
+    }
+
+    .right {
+      width: 80%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <table border="1" width="100%" height="100%"  >
-        <tr>
-            <td>Logo </td>
-            <td colspan="5">Web Site Name</td>
-        </tr>
-        <tr>
-            <td>Home </td>
-            <td>Login </td>
-            <td>Registration  </td>
-            <td>Catalogue</td>
-            <td>Cart</td>
+  <!-- Top Section -->
+  <iframe src="top.html" name="topFrame" class="top"></iframe>
 
-        </tr>
-        
-        <tr >
-            <td>CSE</td>
-            <td rowspan="4" colspan="4"></td>
-        </tr>
-        <tr ><td>ECE</td></tr>
-        <tr  ><td>EEE</td></tr>
-        <tr ><td>CIVIL</td></tr>
-        
-    </tr>
-    </table>
-    
+  <!-- Bottom Section -->
+  <div class="bottom">
+    <iframe src="left.html" name="leftFrame" class="left"></iframe>
+    <iframe src="right.html" name="rightFrame" class="right"></iframe>
+  </div>
 </body>
 </html>
