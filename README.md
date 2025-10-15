@@ -41,13 +41,3 @@ This repository contains my learning journey, practical exercises, and lab files
    git clone https://github.com/Diksha2103/FSD-WD-CSE-17-DIKSHA.git
 
 
-2.Open the project folder:
-
-cd your-repo-name
-
-
-Explore the folders for HTML, CSS, JS, and React examples.
-
-Open any HTML file in your browser or run React projects using:
-
-npm start
