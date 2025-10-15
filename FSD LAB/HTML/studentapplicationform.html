@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+    .form-section {
+      margin-bottom: 20px;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 48%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input[type="reset"] {
+      background-color: #f44336;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Student Application Form</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    
+    <div class="form-section">
+      <label for="fname">Full Name:</label>
+      <input type="text" id="fname" name="fullname" placeholder="Enter your full name" required>
+      
+      <label for="uname">Username:</label>
+      <input type="text" id="uname" name="username" placeholder="Choose a username" required>
+      
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="password" placeholder="Enter password" required>
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="10" max="100">
+    </div>
+
+    <div class="form-section">
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+
+      <label>Hobbies:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+        <label><input type="checkbox" name="hobby" value="music"> Music</label>
+        <label><input type="checkbox" name="hobby" value="travel"> Travel</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="course">Select Course:</label>
+      <select id="course" name="course">
+        <option value="">--Select--</option>
+        <option value="btech">B.Tech</option>
+        <option value="bca">BCA</option>
+        <option value="bsc">B.Sc</option>
+        <option value="mba">MBA</option>
+      </select>
+
+      <label for="branch">Branch:</label>
+      <input list="branches" id="branch" name="branch" placeholder="Type or choose branch">
+      <datalist id="branches">
+        <option value="CSE">
+        <option value="IT">
+        <option value="ECE">
+        <option value="Mechanical">
+        <option value="Civil">
+      </datalist>
+    </div>
+
+    <div class="form-section">
+      
+
+      <label for="time">Preferred Interview Time:</label>
+      <input type="time" id="time" name="interview_time">
+
+      <label for="color">Choose Favorite Color:</label>
+      <input type="color" id="color" name="fav_color">
+
+      <label for="range">Satisfaction Level (1-10):</label>
+      <input type="range" id="range" name="satisfaction" min="1" max="10">
+
+      <label for="website">Personal Website / Portfolio:</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+    </div>
+
+    <div class="form-section">
+      <label for="file">Upload Your Photo:</label>
+      <input type="file" id="file" name="photo" accept="image/*">
+
+      <label for="resume">Upload Resume (PDF):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf">
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" placeholder="Enter your full address"></textarea>
+    </div>
+
+    <div class="form-section">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+
+    <div class="form-section" style="display:flex; justify-content: space-between;">
+      <input type="submit" value="Submit Application">
+      <input type="reset" value="Reset Form">
+    </div>
+
+  </form>
+
+</body>
+</html>
