@@ -74,3 +74,6 @@ body {
       a:hover {
         color: red;
       }
+.container {
+  text-align: center;
+}
