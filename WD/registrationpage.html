@@ -9,7 +9,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 200vh;
+            height: 160vh;
         }
         form {
             background-color: white;
@@ -77,4 +77,47 @@
         <label>Date of Birth:</label><br>
         <select name="day">
             <option>Day</option>
+            
+                <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write("<option>" + i + "</option>");
+                }
+            </script>
+        </select>
+        <select name="month">
+            <option>Month</option>
+            <option>January</option><option>February</option>
+            <option>March</option><option>April</option>
+            <option>May</option><option>June</option>
+            <option>July</option><option>August</option>
+            <option>September</option><option>October</option>
+            <option>November</option><option>December</option>
+        </select>
+        <select name="year">
+            <option>Year</option>
             <script>
+                for (let y = 1980; y <= 2025; y++) {
+                    document.write("<option>" + y + "</option>");
+                }
+            </script>
+        </select>
+        <br><br>
+
+        <label>Languages Known:</label><br>
+        <input type="checkbox" name="lang" value="English" class="languages"> English
+        <input type="checkbox" name="lang" value="Telugu" class="languages"> Telugu
+        <input type="checkbox" name="lang" value="Hindi" class="languages"> Hindi
+        <input type="checkbox" name="lang" value="Tamil" class="languages"> Tamil
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" cols="30"></textarea>
+
+        <div style="display: flex; justify-content: space-between;">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+</body>
+</html>
