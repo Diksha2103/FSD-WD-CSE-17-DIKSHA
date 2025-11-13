@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160vh;
+        }
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            color: rgb(199, 124, 27);
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender, .languages {
+            width: auto;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #6c757d;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <h2>Registration Form</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">E-mail ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" maxlength="10" required>
+
+        <label>Sex:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" class="gender"> Male
+        <input type="radio" id="female" name="gender" value="Female" class="gender"> Female
+        <input type="radio" id="other" name="gender" value="Other" class="gender"> Other
+        <br><br>
+
+        <label>Date of Birth:</label><br>
+        <select name="day">
+            <option>Day</option>
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write("<option>" + i + "</option>");
+                }
+            </script>
+        </select>
+        <select name="month">
+            <option>Month</option>
+            <option>January</option><option>February</option>
+            <option>March</option><option>April</option>
+            <option>May</option><option>June</option>
+            <option>July</option><option>August</option>
+            <option>September</option><option>October</option>
+            <option>November</option><option>December</option>
+        </select>
+        <select name="year">
+            <option>Year</option>
+            <script>
+                for (let y = 1980; y <= 2025; y++) {
+                    document.write("<option>" + y + "</option>");
+                }
+            </script>
+        </select>
+        <br><br>
+
+        <label>Languages Known:</label><br>
+        <input type="checkbox" name="lang" value="English" class="languages"> English
+        <input type="checkbox" name="lang" value="Telugu" class="languages"> Telugu
+        <input type="checkbox" name="lang" value="Hindi" class="languages"> Hindi
+        <input type="checkbox" name="lang" value="Tamil" class="languages"> Tamil
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" cols="30"></textarea>
+
+        <div style="display: flex; justify-content: space-between;">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            const nameRegex = /^[A-Za-z]{6,}$/;    
+            const passwordRegex = /^.{6,}$/;      
+            if (!nameRegex.test(name)) {
+                alert("Name must contain only alphabets and be at least 6 characters long.");
+                return false;
+            }
+
+         
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
